@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      animation: shine 1.5s infinite;
+    }
+    @keyframes shine {
+      0% {
+        box-shadow: 0 0 30px rgba(241, 237, 162, 0.904);
+      }
+      50% {
+        box-shadow: 0 0 60px rgba(195, 252, 235, 0.927);
+      }
+      100% {
+        box-shadow: 0 0 30px rgba(165, 208, 237, 0.934);
+      }
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #f4cd0aec;
+    }
+    .login-container input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background: rgb(241, 246, 248);
+      color: #0b0b0a;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(114, 243, 119, 0.902);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .login-container button:hover {
+      background-color: rgba(76, 175, 80, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="video-bg">
+    <video autoplay muted loop>
+      <source src="c:\Users\DEVIVARA PRASAD\Downloads\Rounded Neon Multicolored lines Animation Background Video _ Footage _ Screensaver.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+  <script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      if (username === 'ashok' && password === '8309896668') {
+        window.location.href = 'birthday.html';
+      } else {
+        alert('Invalid username or password');
+      }
+    }
+  </script>
+</body>
+</html>
